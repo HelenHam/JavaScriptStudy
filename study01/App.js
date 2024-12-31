@@ -60,3 +60,36 @@ for (i = 0 ; i < 5 ; i++){
 }
 
 console.log(i);
+
+// data => json
+// JS에서 data를 다룰 때는 무조건 json으로 다룸
+
+// java에서는 {key:value} 인 게 dto
+// JS에서는 json, 객체로 만들어져 function이 아닌 데이터를 담은 것이 json
+// {key:value} 형태로 보냄
+
+const test = {
+    a1: a,
+    b1: 2,
+    c1: "삼"
+}
+
+console.log(test.a1);
+
+var {b1:bb, c1} = test;
+console.log(bb, c1);
+
+const test2 = test
+const test3 = {...test};
+
+console.log(test, test2, test3);
+
+test.e1 = false;
+test2.b1 = 5;
+test3.d1 = true;
+const test4 = {...test, ...test2, ...test3};
+// Key는 중복이 될 수 없음, 가장 마지막에 담긴 값으로 처리
+// 깊은 복사 시 왼쪽부터 담김
+
+console.log(test, test2, test3);
+console.log(test4);
