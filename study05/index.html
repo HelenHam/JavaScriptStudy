@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>
+        * {box-sizing: border-box;}
+        body{margin: 0;}
+        section{margin: 0 100px;}
+        #box {width: 500px; display: grid; grid-template-columns: auto auto auto auto auto auto auto auto auto auto; margin: 0 100px;}
+        #box div {height: 50px; border: 1px solid #000;}
+    </style>
+    <script>
+        window.onload = function(){
+            var html = "";
+            for (var i = 0; i < 100; i++){
+                html +="<div></div>";
+            }
+            document.querySelector("#box").innerHTML = html;
+        }
+    </script>
+    <script src="/study05/index.js"></script>
+    <script scr="/study05/grid.js"></script>
+</head>
+<body>
+    <h1>Q1</h1>
+    <p>input을 이용해 숫자를 받아서 button을 클릭 시 해당 숫자 값의 단을 인식해 구구단 출력이 되도록 하시오</p>
+    <hr>
+    <button type="button" onclick="구구단()">구구단 출력</button>
+    <br>
+    <input type="number" id="a" placeholder="단수">
+    <br/>
+    <p>결과 : <span id="result"></span></p>
+    <hr>
+    <h1>Q2</h1>
+    <p>10*10 칸으로 이루어진 격자 공간에서 키보드 방향키를 입력 받으면 (1,1) 시작에서 이동하는 이벤트 구현</p>
+    <hr>
+    <button type="button" onclick="움직이기()">시작</button>
+    <div id="box"></div>
+
+</body>
+</html>

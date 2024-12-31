@@ -93,3 +93,16 @@ const test4 = {...test, ...test2, ...test3};
 
 console.log(test, test2, test3);
 console.log(test4);
+
+
+function fn_1() {
+    console.log("출력해줄게!");
+}
+
+function fn_2(f) {
+    f();
+}
+
+fn_2(fn_1);
+
+fn_2(function() {console.log("난 출력할 거야")});
